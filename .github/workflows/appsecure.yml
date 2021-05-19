@@ -46,7 +46,7 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "bmi-test-hf"
           heroku_email: "naufalarkaan.arkaan@gmail.com"
-    - name: ZAP Scan
+    - name: DAST with ZAP
       uses: zaproxy/action-full-scan@v0.2.0
       with:
-      target: 'https://bmi-test-hf.herokuapp.com/?height=70&weight=167/'
+      target: "https://bmi-test-hf.herokuapp.com/?height=70&weight=167/"
