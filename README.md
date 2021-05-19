@@ -32,9 +32,8 @@ You can check configuration deploy on :
 .github/workflows/appsecure.yml.
 ```
 
-
-```
 Security Vulnerability Check :
+```
 - sast-scan (SAST) : https://github.com/AppThreat/sast-scan (bandit, gitleaks, depscan) 
 - OWASP ZAP (DAST) : https://github.com/marketplace/actions/owasp-zap-full-scan
 ```   
