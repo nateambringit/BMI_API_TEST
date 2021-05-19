@@ -7,8 +7,8 @@ api = Api(app)
 
 
 parser = reqparse.RequestParser()
-parser.add_argument('height',type=float, required = True)
-parser.add_argument('weight', type=float, required=True)
+parser.add_argument('height', required = True)
+parser.add_argument('weight', required=True)
 bmi = {}
 
 
@@ -19,17 +19,8 @@ class BMI(Resource):
 
     def get(self):
         try:
-            height = parser.parse_args().get('height')
-        except ValueError:
-            response = {
-                "statusCode": 200,
-                "bmi": "-",
-                "label":"-",
-                "message":"Value can't be strings"
-            }
-            return response
-        try:
-            weight = parser.parse_args().get('weight')
+            height = float(parser.parse_args().get('height'))
+            weight = float(parser.parse_args().get('weight'))
         except ValueError:
             response = {
                 "statusCode": 200,
@@ -46,7 +37,7 @@ class BMI(Resource):
                 "message":"Value can't be zero or negative"
             }
             return response
-        bmi = round(height/(weight/100)**2,2)
+        bmi = round(weight/(height/100)**2,2)
 
         if(bmi>=18.5) and (bmi<=24.9):
             response = {
