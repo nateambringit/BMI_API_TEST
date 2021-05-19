@@ -49,4 +49,4 @@ jobs:
     - name: DAST with ZAP
       uses: zaproxy/action-full-scan@v0.2.0
       with:
-      target: "https://bmi-test-hf.herokuapp.com/?height=70&weight=167/"
+        target: "https://bmi-test-hf.herokuapp.com/?height=70&weight=167/"
