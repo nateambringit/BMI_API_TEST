@@ -12,7 +12,7 @@ How to use the service :
 How to run in your environment :
 ```
 1. Requirement python 3.x (will be good if you use python 3.6) 
-2. pip install requirement.txt
+2. pip install requirements.txt
 3. python3 app.py
 ```
 
